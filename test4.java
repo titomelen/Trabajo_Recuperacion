@@ -42,26 +42,28 @@ class test4 {
 	
 	@DisplayName(value = "Prueba de caja negra con valor limite superior")
 	@Test
+	//El valor limite va a ser el notable, el valor debe estar entre 7 y 9, pero sin llegar a 9.
 	void test1funcion4() {
 		assertEquals("Notable", totalfunciones.funcion4(new int[] {8,8,8,8,8,8}));
 	}
 	
 	@DisplayName(value = "Prueba de caja negra con valor limite inferior")
 	@Test
+	//El valor limite va a ser el suficiente, el valor debe estar entre 5 y 6, pero sin llegar a 6.
 	void test2funcion4() {
 		assertEquals("Suficiente", totalfunciones.funcion4(new int[] {5,5,5,5,5,5}));
 	}
 	
-	@DisplayName(value = "Prueba de caja negra con valor limite superior +1")
+	@DisplayName(value = "Prueba de caja negra con valor aleatorio")
 	@Test
 	void test3funcion4() {
-		assertEquals("Sobresaliente", totalfunciones.funcion4(new int[] {10,10,10,10,10,10}));
+		assertEquals("Bien", totalfunciones.funcion4(new int[] {5,1,6,9,8,7}));
 	}
 	
-	@DisplayName(value = "Prueba de caja negra con valor limite inferior -1")
+	@DisplayName(value = "Prueba de caja negra con valor nulo")
 	@Test
 	void test4funcion4() {
-		assertEquals("Insuficiente", totalfunciones.funcion4(new int[] {4,4,4,4,4,4}));
+		assertEquals(null, totalfunciones.funcion4(null));
 	}
 	
 	//PRUEBAS DE CAJA BLANCA
