@@ -49,7 +49,7 @@ class test5 {
 	@DisplayName(value = "Prueba de caja negra con valor vacio")
 	@Test
 	void test2funcion5() {
-		assertEquals(0, totalfunciones.funcion5("", 1, 9));
+		assertEquals(null, totalfunciones.funcion5("", 1, 9));
 	}
 	
 	@DisplayName(value = "Prueba de caja negra con valor aleatorio")
